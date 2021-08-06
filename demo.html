@@ -1,0 +1,964 @@
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Ministry of Transport, Abia State Governmemt</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
+
+  <style>
+  .box
+  {
+   width:800px;
+   margin:0 auto;
+  }
+/* On screens that are 600px or less*/
+@media screen and (max-width: 600px) {
+  body {
+    width:300px;
+    margin:0 auto;
+  }
+}
+  
+  .active_tab1
+  {
+   background-color:#fff;
+   color:#333;
+   font-weight: 600;
+  }
+  .inactive_tab1
+  {
+   background-color: #f5f5f5;
+   color: #333;
+   cursor: not-allowed;
+  }
+  .has-error
+  {
+   border-color:#cc0000;
+   background-color:#ffff99;
+  }
+  </style>
+ </head>
+ <body>
+ <br />
+ <div class="box">
+ <div class="container-fluid">
+    <div class="row">
+   <br />
+   <h2 align="center">Ministry of Transport, Abia State Governmemt</h2><br />
+   <form method="post" id="register_form">
+    <ul class="nav nav-tabs">
+     <li class="nav-item">
+      <a class="nav-link active_tab1" style="border:1px solid #ccc" id="list_login_details">Riders/Driver Details</a>
+     </li>
+     <li class="nav-item">
+      <a class="nav-link inactive_tab1" id="list_personal_details" style="border:1px solid #ccc">Vehicle/Keke Details</a>
+     </li>
+     <li class="nav-item">
+      <a class="nav-link inactive_tab1" id="list_contact_details" style="border:1px solid #ccc">Owner's Details</a>
+     </li>
+    </ul>
+    <div class="tab-content" style="margin-top:16px;">
+     <div class="tab-pane active" id="login_details">
+      <div class="panel panel-default">
+       <div class="panel-heading">Riders/Driver Details</div>
+       <div class="panel-body">
+        
+            <div class="form-group col-xs-12 col-sm-6">
+                <label>Surname</label>
+                    <input type="text" name="surname" id="last_name" class="form-control" >
+                    <span id="error_last_name" class="text-danger"></span>
+         
+            </div>
+
+ 
+            <div class="form-group col-xs-12 col-sm-6">
+                <label>First Name</label> 
+                    <input type="text" id="first_name" name="first_name" class="form-control" >
+                    <span id="error_first_name" class="text-danger"></span>
+                </div>    
+   
+       
+            <div class="form-group col-xs-12 col-sm-6">
+                <label>Other Names</label>
+                    <input type="text" name="other_name" class="form-control">
+        </div>
+    
+        <div class="form-group col-xs-12 col-sm-6">
+                <label>Your Email Address</label>
+                    <input type="text" id="email" name="email" class="form-control" required>
+                    <span id="error_email" class="text-danger"></span>
+        </div>
+    
+
+       <div class="form-group col-xs-12 col-sm-6">
+               <label>Phone Number</label>
+                    <input type="text" id="mobile_no" name="phone_number" class="form-control" placeholder="Write Your Phone Number" required>
+                    <span id="error_mobile_no" class="text-danger"></span>
+        </div>
+
+        <div class="form-group col-xs-12 col-sm-6">
+                <label>Alternate Phone Number</label>
+                <input type="text" id="alt_number" name="alt_number" class="form-control" placeholder="Write Your Alternate Phone Number" required>
+                <span id="error_alt_number" class="text-danger"></span>
+            </div>
+       
+        
+        <div class="form-group col-xs-12 col-sm-6 my-2">
+                <label>State of Origin</label>
+                    <input type="text" id="state_of_origin" name="state_of_origin" class="form-control" placeholder="State of Origin" required>
+                    <span id="error_state_of_origin" class="text-danger"></span>
+        </div>
+    
+        <div class="form-group col-xs-12 col-sm-6 my-2">
+                <label>LGA of Origin</label>
+                    <input type="text" id="lga" name="lga" class="form-control" placeholder="LGA of Origin" required>
+                    <span id="error_lga" class="text-danger"></span>
+        </div>
+  
+            <div class="form-group col-xs-12 col-sm-6 my-2">
+                <label>Nationality</label>
+                    <input type="text" id="nationality" name="nationality" class="form-control" placeholder="Nationality" required>
+                    <span id="error_nationality" class="text-danger"></span>
+            </div>
+      
+       
+            <div class="form-group col-xs-12 col-sm-6 my-2">
+                <label>Date of Birth</label>
+                    <input type="text" id="dob" name="dob" class="form-control" placeholder="Date of Birth" required>
+                    <span id="error_dob" class="text-danger"></span>
+        </div>
+        
+            <div class="form-group col-xs-12 col-sm-6">
+                <label>Marital Status</label>
+                <div>
+                <label class= 'radio-inline'>
+                    <input class="radio" type="radio" name="marital_status" id="single" value="Single" checked>
+                    Single
+                </label>
+                <label class="radio-inline" >
+                    <input class="radio" type="radio" name="marital_status" id="married" value="Married">
+                    Married
+                </label>
+                <label class='radio-inline'>
+                    <input class="radio" type="radio" name="marital_status" id="divorced" value="Divorced">
+                   Divorced
+                </label>
+                   <label class="radio-inline">
+                    <input class="radio" type="radio" name="marital_status" id="widowed" value="Widowed">
+                    Widowed
+                </label> 
+                </div>
+        </div>
+            <div class="form-group col-xs-12 col-sm-6">
+                    <label>Gender</label>
+                    <div>
+                        <label class="radio-inline">
+                        <input class="radio" type="radio" name="gender" id="male" value="Male" checked>
+                        Male
+                    </label>
+                    
+                    <label class="radio-inline">
+                        <input class="radio" type="radio" name="gender" id="female" value="Female">
+                        Female
+                    </label>
+                 </div>
+                </div>               
+        </div>
+
+        <div class="form-group col-xs-12 col-sm-6">
+                <label>Residential Address</label>
+                    <input type="text" id="residential_address" name="residential_address" class="form-control" placeholder="Residential Address" required>
+                    <span id="error_residential_address" class="text-danger"></span>
+    
+        </div>
+            
+        <div class="form-group col-xs-12 col-sm-6">
+                <label>Permanent Address</label>
+                    <input type="text" id="permanent_address" name="permanent_address" class="form-control" placeholder="Permanent Address">
+                    <span id="error_permanent_address" class="text-danger"></span>
+        </div>
+        
+        <div class="form-group col-xs-12 col-sm-6">
+                <label>Association</label>
+                    <input type="text" id="association" name="association" class="form-control" placeholder="Association" required>
+                    <span id="error_association" class="text-danger"></span>
+        </div>
+        
+        <div class="form-group col-xs-12 col-sm-6">
+                <label>Association Zone</label>
+                    <input type="text" id="association_zone" name="association_zone" class="form-control" placeholder="Association Zone">
+                    <span id="error_association_zone" class="text-danger"></span>
+        </div>
+                    
+        
+        <div class="form-group col-xs-12 col-sm-6">
+            <label>Next of Kin Name</label>
+
+                    <input type="text" id="next_of_kin_name" name="next_of_kin_name" class="form-control" placeholder="Next of Kin Name">
+                    <span id="error_next_of_kin_name" class="text-danger"></span>
+        </div>
+       
+        <div class="form-group col-xs-12 col-sm-6">
+             <label>Next of Kin Phone Number</label>     
+                    <input type="text" id="next_of_kin_phone_number" name="next_of_kin_phone_number" class="form-control" placeholder="Next of Kin Phone Number">
+                    <span id="error_next_of_kin_phone_number" class="text-danger"></span>
+        </div>
+        
+        <div class="form-group col-xs-12 col-sm-6">
+             <label>Next of Kin Maiden Name</label>
+                    <input type="text" id="next_of_kin_maiden_name" name="next_of_kin_maiden_name" class="form-control" placeholder="Next of Kin Maiden Name">
+                    <span id="error_next_of_kin_maiden_name" class="text-danger"></span>
+        </div>
+
+     
+        <div class="form-group col-xs-12 col-sm-6">
+                    <label for="passport"  class="form-label">Passport Upload</label>
+                    <input class="form-control" id="passport" name="passport" type="file">
+                    <span id="error_passport" class="text-danger"></span>
+        </div>
+        <br />
+        <div align="center">
+         <button type="button" name="btn_login_details" id="btn_login_details" class="btn btn-info btn-lg">Next</button>
+        </div>
+        <br />
+       </div>
+      </div>
+     </div>
+     <div class="tab-pane fade" id="personal_details">
+      <div class="panel panel-default">
+       <div class="panel-heading">Vehicle/Keke Details</div>
+       <div class="panel-body">
+        <div class="col-xl-6 col-lg-6 col-md-6">
+            <div class="input-box">
+                <h5>Vehicle Type</h5>
+                <div class="input-text mb-35">
+                    <input type="text" name="vehicle_type" id="vehicle_type" class="form-control" >
+                    <span id="error_vehicle_type" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-6">
+            <div class="input-box">
+                <h5>Plate Number</h5>
+                <div class="input-text mb-35">
+                    <input type="text" name="plate_number" id="plate_number" class="form-control" >
+                    <span id="error_plate_number" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-6">
+            <div class="input-box">
+                <h5>Make</h5>
+                <div class="input-text mb-35">
+                    <input type="text" name="make" id="make" class="form-control" >
+                    <span id="error_make" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-6">
+            <div class="input-box">
+                <h5>Capacity</h5>
+                <div class="input-text mb-35">
+                    <input type="text" name="capacity" id="capacity" class="form-control" >
+                    <span id="error_capacity" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-6">
+            <div class="input-box">
+                <h5>Type</h5>
+                <div class="input-text mb-35">
+                    <input type="text" name="type" id="type" class="form-control" >
+                    <span id="error_type" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-6">
+            <div class="input-box">
+                <h5>Chasis Number</h5>
+                <div class="input-text mb-35">
+                    <input type="text" name="chasis_number" id="chasis_number" class="form-control" >
+                    <span id="error_chasis_number" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-6">
+            <div class="input-box">
+                <h5>Operating Zone</h5>
+                <div class="input-text mb-35">
+                    <input type="text" name="operating_zone" id="operating_zone" class="form-control" >
+                    <span id="error_operating_zone" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        <br />
+        <div align="center">
+         <button type="button" name="previous_btn_personal_details" id="previous_btn_personal_details" class="btn btn-default btn-lg">Previous</button>
+         <button type="button" name="btn_personal_details" id="btn_personal_details" class="btn btn-info btn-lg">Next</button>
+        </div>
+        <br />
+       </div>
+      </div>
+     </div>
+     <div class="tab-pane fade" id="contact_details">
+      <div class="panel panel-default">
+       <div class="panel-heading">Owner's Details</div>
+       <div class="panel-body">
+        <div class="col-xl-6 col-lg-6 col-md-6">
+            <div class="input-box">
+                <h5>Name</h5>
+                <div class="input-text mb-35">
+                    <input type="text" name="owner_name" id="owner_name" class="form-control" >
+                    <span id="error_owner_name" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-6 col-lg-6 col-md-6">
+            <div class="input-box">
+                <h5>Phone Number</h5>
+                <div class="input-text mb-35">
+                    <input type="text" name="owner_phone_number" id="owner_phone_number" class="form-control" >
+                    <span id="error_owner_phone_number" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-6">
+            <div class="input-box">
+                <h5>Alternate Number</h5>
+                <div class="input-text mb-35">
+                    <input type="text" name="owner_alternate_number" class="form-control" >
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-6">
+            <div class="input-box">
+                <h5>Gender</h5>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="owner_gender" id="male" value="Male" checked>
+                    <label class="form-check-label" for="male">Male</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="owner_gender" id="female" value="Female">
+                    <label class="form-check-label" for="female">Female</label>
+                  </div>
+            </div>               
+    </div>
+        <div class="col-xl-6 col-lg-6 col-md-6">
+            <div class="input-box">
+                <h5>Contact Address</h5>
+                <div class="input-text mb-35">
+                    <input type="text" name="owner_contact_address" id="owner_contact_address" class="form-control" >
+                    <span id="error_owner_contact_address" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-6">
+            <div class="input-box">
+                <h5>State of Origin</h5>
+                <div class="input-text mb-35">
+                    <input type="text" name="owner_state" id="owner_state" class="form-control" >
+                    <span id="error_owner_state" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-6">
+            <div class="input-box">
+                <h5>Next of Kin Name</h5>
+                <div class="input-text mb-35">
+                    <input type="text" name="owner_next_of_kin" id="owner_next_of_kin" class="form-control" >
+                    <span id="error_owner_next_of_kin" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-6">
+            <div class="input-box">
+                <h5>Next of Kin Phone Number</h5>
+                <div class="input-text mb-35">
+                    <input type="text" name="owner_next_of_kin_number" id="owner_next_of_kin_number" class="form-control" >
+                    <span id="error_owner_next_of_kin_number" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        <br />
+        <div align="center">
+         <button type="button" name="previous_btn_contact_details" id="previous_btn_contact_details" class="btn btn-default btn-lg">Previous</button>
+         <button type="button" name="btn_contact_details" id="btn_contact_details" class="btn btn-success btn-lg">Register</button>
+        </div>
+        <br />
+       </div>
+      </div>
+     </div>
+   </form>
+    </div>
+    </div>
+    </div>
+ </body>
+</html>
+
+<script>
+$(document).ready(function(){
+ 
+ $('#btn_login_details').click(function(){
+  
+    var error_email = '';
+  var error_lga = '';
+  var error_last_name = '';
+  var error_first_name = '';
+  var error_state_of_origin = '';
+  var error_mobile_no = '';
+  var error_alt_number = '';
+  var error_next_of_kin_phone_number = '';
+  var error_nationality = '';
+  var error_dob = '';
+  var error_residential_address = '';
+  var error_permanent_address = '';
+  var error_association = '';
+  var error_association_zone = '';
+  var error_next_of_kin_name = '';
+  var error_next_of_kin_phone_number = '';
+  var error_next_of_kin_maiden_name = '';
+  var error_passport = '';
+  var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+  var mobile_validation = /^\d{11}$/;
+  var next_of_kin_phone_number_validation = /^\d{11}$/;
+  if($.trim($('#email').val()).length == 0)
+  {
+   error_email = 'Email is required';
+   $('#error_email').text(error_email);
+   $('#email').addClass('has-error');
+  }
+  else
+  {
+   if (!filter.test($('#email').val()))
+   {
+    error_email = 'Invalid Email';
+    $('#error_email').text(error_email);
+    $('#email').addClass('has-error');
+   }
+   else
+   {
+    error_email = '';
+    $('#error_email').text(error_email);
+    $('#email').removeClass('has-error');
+   }
+  }
+  
+  if($.trim($('#last_name').val()).length == 0)
+  {
+   error_last_name = 'Surname is required';
+   $('#error_last_name').text(error_last_name);
+   $('#last_name').addClass('has-error');
+  }
+  else
+  {
+   error_last_name = '';
+   $('#error_last_name').text(error_last_name);
+   $('#last_name').removeClass('has-error');
+  }
+
+  if($.trim($('#first_name').val()).length == 0)
+  {
+   error_first_name = 'First Name is required';
+   $('#error_first_name').text(error_first_name);
+   $('#first_name').addClass('has-error');
+  }
+  else
+  {
+   error_first_name = '';
+   $('#error_first_name').text(error_first_name);
+   $('#first_name').removeClass('has-error');
+  }
+
+  if($.trim($('#state_of_origin').val()).length == 0)
+  {
+   error_state_of_origin = 'State of Origin is required';
+   $('#error_state_of_origin').text(error_state_of_origin);
+   $('#state_of_origin').addClass('has-error');
+  }
+  else
+  {
+   error_state_of_origin = '';
+   $('#error_state_of_origin').text(error_state_of_origin);
+   $('#state_of_origin').removeClass('has-error');
+  }
+  
+  if($.trim($('#mobile_no').val()).length == 0)
+  {
+   error_mobile_no = 'Phone Number is required';
+   $('#error_mobile_no').text(error_mobile_no);
+   $('#mobile_no').addClass('has-error');
+  }
+  else
+  {
+   if (!mobile_validation.test($('#mobile_no').val()))
+   {
+    error_mobile_no = 'Invalid Phone Number';
+    $('#error_mobile_no').text(error_mobile_no);
+    $('#mobile_no').addClass('has-error');
+   }
+   else
+   {
+    error_mobile_no = '';
+    $('#error_mobile_no').text(error_mobile_no);
+    $('#mobile_no').removeClass('has-error');
+   }
+  }
+
+  if($.trim($('#alt_number').val()).length == 0)
+  {
+   error_alt_number = 'Alternate Number is required';
+   $('#error_alt_number').text(error_alt_number);
+   $('#alt_number').addClass('has-error');
+  }
+  else
+  {
+   if (!mobile_validation.test($('#alt_number').val()))
+   {
+    error_alt_number = 'Invalid Phone Number';
+    $('#error_alt_number').text(error_alt_number);
+    $('#alt_number').addClass('has-error');
+   }
+   else
+   {
+    error_alt_number = '';
+    $('#error_alt_number').text(error_alt_number);
+    $('#alt_number').removeClass('has-error');
+   }
+  }
+
+  if($.trim($('#lga').val()).length == 0)
+  {
+   error_lga = 'LGA of Origin is required';
+   $('#error_lga').text(error_lga);
+   $('#lga').addClass('has-error');
+  }
+  else
+  {
+   error_lga = '';
+   $('#error_lga').text(error_lga);
+   $('#lga').removeClass('has-error');
+  }
+
+  if($.trim($('#nationality').val()).length == 0)
+  {
+   error_nationality = 'Nationality is required';
+   $('#error_nationality').text(error_nationality);
+   $('#nationality').addClass('has-error');
+  }
+  else
+  {
+   error_nationality = '';
+   $('#error_nationality').text(error_nationality);
+   $('#first_nationality').removeClass('has-error');
+  }
+
+  if($.trim($('#dob').val()).length == 0)
+  {
+   error_dob = 'Date of Birth is required';
+   $('#error_dob').text(error_dob);
+   $('#dob').addClass('has-error');
+  }
+  else
+  {
+   error_dob = '';
+   $('#error_dob').text(error_dob);
+   $('#first_dob').removeClass('has-error');
+  }
+
+  if($.trim($('#residential_address').val()).length == 0)
+  {
+   error_residential_address = ' Residential Address is required';
+   $('#error_residential_address').text(error_residential_address);
+   $('#residential_address').addClass('has-error');
+  }
+  else
+  {
+   error_residential_address = '';
+   $('#error_residential_address').text(error_residential_address);
+   $('#first_residential_address').removeClass('has-error');
+  }
+
+  if($.trim($('#permanent_address').val()).length == 0)
+  {
+   error_permanent_address = 'Permanent Address is required';
+   $('#error_permanent_address').text(error_permanent_address);
+   $('#permanent_address').addClass('has-error');
+  }
+  else
+  {
+   error_permanent_address = '';
+   $('#error_permanent_address').text(error_permanent_address);
+   $('#permanent_address').removeClass('has-error');
+  }
+
+  if($.trim($('#association').val()).length == 0)
+  {
+   error_association = 'Association is required';
+   $('#error_association').text(error_association);
+   $('#association').addClass('has-error');
+  }
+  else
+  {
+   error_association = '';
+   $('#error_association').text(error_association);
+   $('#association').removeClass('has-error');
+  }
+
+  
+  if($.trim($('#association_zone').val()).length == 0)
+  {
+   error_association_zone = 'Association Zone is required';
+   $('#error_association_zone').text(error_association_zone);
+   $('#association_zone').addClass('has-error');
+  }
+  else
+  {
+   error_association_zone = '';
+   $('#error_association_zone').text(error_association_zone);
+   $('#association_zone').removeClass('has-error');
+  }
+
+  if($.trim($('#next_of_kin_name').val()).length == 0)
+  {
+   error_next_of_kin_name = 'Next of Kin Name is required';
+   $('#error_next_of_kin_name').text(error_next_of_kin_name);
+   $('#next_of_kin_name').addClass('has-error');
+  }
+  else
+  {
+   error_next_of_kin_name = '';
+   $('#error_next_of_kin_name').text(error_next_of_kin_name);
+   $('#next_of_kin_name').removeClass('has-error');
+  }
+
+  if($.trim($('#next_of_kin_phone_number').val()).length == 0)
+  {
+   error_next_of_kin_phone_number = 'Next of Kin Phone Number is required';
+   $('#error_next_of_kin_phone_number').text(error_next_of_kin_phone_number);
+   $('#next_of_kin_phone_number').addClass('has-error');
+  }
+  else
+  {
+   if (!next_of_kin_phone_number_validation.test($('#next_of_kin_phone_number').val()))
+   {
+    error_next_of_kin_phone_number = 'Invalid Phone Number';
+    $('#error_next_of_kin_phone_number').text(error_next_of_kin_phone_number);
+    $('#next_of_kin_phone_number').addClass('has-error');
+   }
+   else
+   {
+    error_next_of_kin_phone_number = '';
+    $('#error_next_of_kin_phone_number').text(error_next_of_kin_phone_number);
+    $('#next_of_kin_phone_number').removeClass('has-error');
+   }
+  }
+
+  if($.trim($('#next_of_kin_maiden_name').val()).length == 0)
+  {
+   error_next_of_kin_maiden_name = 'Next of Kin Maiden Name is required';
+   $('#error_next_of_kin_maiden_name').text(error_next_of_kin_maiden_name);
+   $('#next_of_kin_maiden_name').addClass('has-error');
+  }
+  else
+  {
+   error_next_of_kin_maiden_name = '';
+   $('#error_next_of_kin_maiden_name').text(error_next_of_kin_maiden_name);
+   $('#next_of_kin_maiden_name').removeClass('has-error');
+  }
+  
+  if($.trim($('#passport').val()).length == 0)
+  {
+   error_passport = 'Passport is required';
+   $('#error_passport').text(error_passport);
+   $('#passport').addClass('has-error');
+  }
+  else
+  {
+   error_passport = '';
+   $('#error_passport').text(error_next_of_kin_maiden_name);
+   $('#passport').removeClass('has-error');
+  }
+  if(error_email != '' || error_last_name != '' || error_first_name != '' || error_alt_number != '' || error_state_of_origin != '' || error_lga != '' || error_nationality != '' || error_dob != '' || error_mobile_no != '' || error_residential_address != '' || error_permanent_address != '' || error_association != '' || error_association_zone != ''|| error_next_of_kin_name != '' || error_next_of_kin_phone_number != '' || error_next_of_kin_maiden_name != '' || error_passport != '')
+  {
+   return false;
+  }
+  else
+  {
+   $('#list_login_details').removeClass('active active_tab1');
+   $('#list_login_details').removeAttr('href data-toggle');
+   $('#login_details').removeClass('active');
+   $('#list_login_details').addClass('inactive_tab1');
+   $('#list_personal_details').removeClass('inactive_tab1');
+   $('#list_personal_details').addClass('active_tab1 active');
+   $('#list_personal_details').attr('href', '#personal_details');
+   $('#list_personal_details').attr('data-toggle', 'tab');
+   $('#personal_details').addClass('active in');
+  }
+ });
+ 
+ $('#previous_btn_personal_details').click(function(){
+  $('#list_personal_details').removeClass('active active_tab1');
+  $('#list_personal_details').removeAttr('href data-toggle');
+  $('#personal_details').removeClass('active in');
+  $('#list_personal_details').addClass('inactive_tab1');
+  $('#list_login_details').removeClass('inactive_tab1');
+  $('#list_login_details').addClass('active_tab1 active');
+  $('#list_login_details').attr('href', '#login_details');
+  $('#list_login_details').attr('data-toggle', 'tab');
+  $('#login_details').addClass('active in');
+ });
+ 
+ $('#btn_personal_details').click(function(){
+    var error_vehicle_type = '';
+  var error_plate_number = '';
+  var error_make = '';
+  var error_capacity = '';
+  var error_type = '';
+  var error_chasis_number = '';
+  var error_operating_zone = '';
+  
+  if($.trim($('#vehicle_type').val()).length == 0)
+  {
+   error_vehicle_type = 'Vehicle Type is required';
+   $('#error_vehicle_type').text(error_vehicle_type);
+   $('#vehicle_type').addClass('has-error');
+  }
+  else
+  {
+   error_vehicle_type = '';
+   $('#error_vehicle_type').text(error_vehicle_type);
+   $('#vehicle_type').removeClass('has-error');
+  }
+  
+  if($.trim($('#plate_number').val()).length == 0)
+  {
+   error_plate_number = 'Plate Number is required';
+   $('#error_plate_number').text(error_plate_number);
+   $('#plate_number').addClass('has-error');
+  }
+  else
+  {
+   error_plate_number = '';
+   $('#error_plate_number').text(error_plate_number);
+   $('#plate_number').removeClass('has-error');
+  }
+
+  if($.trim($('#make').val()).length == 0)
+  {
+   error_make = 'Make is required';
+   $('#make').text(error_make);
+   $('#make').addClass('has-error');
+  }
+  else
+  {
+   error_make = '';
+   $('#error_make').text(error_make);
+   $('#make').removeClass('has-error');
+  }
+
+  if($.trim($('#capacity').val()).length == 0)
+  {
+   error_capacity = 'Capacity is required';
+   $('#error_capacity').text(error_capacity);
+   $('#capacity').addClass('has-error');
+  }
+  else
+  {
+   error_capacity = '';
+   $('#error_capacity').text(error_capacity);
+   $('#capacity').removeClass('has-error');
+  }
+
+  if($.trim($('#type').val()).length == 0)
+  {
+   error_type = 'Type is required';
+   $('#error_type').text(error_type);
+   $('#type').addClass('has-error');
+  }
+  else
+  {
+   error_type = '';
+   $('#error_type').text(error_type);
+   $('#type').removeClass('has-error');
+  }
+
+  if($.trim($('#chasis_number').val()).length == 0)
+  {
+   error_chasis_number = 'Chasis Number is required';
+   $('#error_chasis_number').text(error_chasis_number);
+   $('#chasis_number').addClass('has-error');
+  }
+  else
+  {
+   error_chasis_number= '';
+   $('#error_chasis_number').text(error_chasis_number);
+   $('#chasis_number').removeClass('has-error');
+  }
+
+  if($.trim($('#operating_zone').val()).length == 0)
+  {
+   error_operating_zone = 'Operating Zone is required';
+   $('#error_operating_zone').text(error_operating_zone);
+   $('#operating_zone').addClass('has-error');
+  }
+  else
+  {
+   error_operating_zone = '';
+   $('#error_operating_zone').text(error_operating_zone);
+   $('#operating_zone').removeClass('has-error');
+  }
+
+  if(error_plate_number != '' || error_vehicle_type != '' || error_operating_zone !='' || error_make != '' || error_capacity != '' || error_type != '' || error_chasis_number != '')
+  {
+   return false;
+  }
+
+  else
+  {
+   $('#list_personal_details').removeClass('active active_tab1');
+   $('#list_personal_details').removeAttr('href data-toggle');
+   $('#personal_details').removeClass('active');
+   $('#list_personal_details').addClass('inactive_tab1');
+   $('#list_contact_details').removeClass('inactive_tab1');
+   $('#list_contact_details').addClass('active_tab1 active');
+   $('#list_contact_details').attr('href', '#contact_details');
+   $('#list_contact_details').attr('data-toggle', 'tab');
+   $('#contact_details').addClass('active in');
+  }
+ });
+ 
+ $('#previous_btn_contact_details').click(function(){
+  $('#list_contact_details').removeClass('active active_tab1');
+  $('#list_contact_details').removeAttr('href data-toggle');
+  $('#contact_details').removeClass('active in');
+  $('#list_contact_details').addClass('inactive_tab1');
+  $('#list_personal_details').removeClass('inactive_tab1');
+  $('#list_personal_details').addClass('active_tab1 active');
+  $('#list_personal_details').attr('href', '#personal_details');
+  $('#list_personal_details').attr('data-toggle', 'tab');
+  $('#personal_details').addClass('active in');
+ });
+ 
+ $('#btn_contact_details').click(function(){
+  var error_owner_name = '';
+  var error_owner_contact_address = '';
+  var error_owner_state = '';
+  var error_owner_next_of_kin = '';
+  var error_owner_next_of_kin_number = '';
+  var error_owner_phone_number = '';
+  var mobile_validation = /^\d{11}$/;
+  
+  if($.trim($('#owner_name').val()).length == 0)
+  {
+   error_owner_name = 'Name is required';
+   $('#error_owner_name').text(error_owner_name);
+   $('#owner_name').addClass('has-error');
+  }
+  else
+  {
+   error_owner_name = '';
+   $('#error_owner_name').text(error_owner_name);
+   $('#owner_name').removeClass('has-error');
+  }
+
+  
+  if($.trim($('#owner_phone_number').val()).length == 0)
+  {
+   error_owner_phone_number = 'Phone Number is required';
+   $('#error_owner_phone_number').text(error_owner_phone_number);
+   $('#owner_phone_number').addClass('has-error');
+  }
+  else
+  {
+   if (!mobile_validation.test($('#owner_phone_number').val()))
+   {
+    error_owner_phone_number = 'Invalid Phone Number';
+    $('#error_owner_phone_number').text(error_owner_phone_number);
+    $('#owner_phone_number').addClass('has-error');
+   }
+   else
+   {
+    error_owner_phone_number = '';
+    $('#error_owner_phone_number').text(error_owner_phone_number);
+    $('#owner_phone_number').removeClass('has-error');
+   }
+  }
+
+  if($.trim($('#owner_contact_address').val()).length == 0)
+  {
+   error_owner_contact_address = 'Contact Address is required';
+   $('#error_owner_contact_address').text(error_owner_contact_address);
+   $('#owner_contact_address').addClass('has-error');
+  }
+  else
+  {
+   error_owner_contact_address = '';
+   $('#error_owner_contact_address').text(error_owner_contact_address);
+   $('#owner_contact_address').removeClass('has-error');
+  }
+
+  if($.trim($('#owner_state').val()).length == 0)
+  {
+   error_owner_state = 'State is required';
+   $('#error_owner_state').text(error_owner_state);
+   $('#owner_state').addClass('has-error');
+  }
+  else
+  {
+   error_owner_state = '';
+   $('#error_owner_state').text(error_owner_state);
+   $('#owner_state').removeClass('has-error');
+  }
+  
+  
+  if($.trim($('#owner_next_of_kin').val()).length == 0)
+  {
+   error_owner_next_of_kin = 'Next of Kin is required';
+   $('#error_owner_next_of_kin').text(error_owner_next_of_kin);
+   $('#owner_next_of_kin').addClass('has-error');
+  }
+  else
+  {
+   error_owner_state = '';
+   $('#error_owner_next_of_kin').text(error_owner_next_of_kin);
+   $('#owner_next_of_kin').removeClass('has-error');
+  }
+  if($.trim($('#owner_next_of_kin_number').val()).length == 0)
+  {
+   error_owner_next_of_kin_number = 'Next of Kin Number is required';
+   $('#error_owner_next_of_kin_number').text(error_owner_next_of_kin_number);
+   $('#owner_next_of_kin_number').addClass('has-error');
+  }
+  else
+  {
+   if (!mobile_validation.test($('#owner_next_of_kin_number').val()))
+   {
+    error_owner_next_of_kin_number = 'Invalid Phone Number';
+    $('#error_owner_next_of_kin_number').text(error_owner_next_of_kin_number);
+    $('#owner_next_of_kin_number').addClass('has-error');
+   }
+   else
+   {
+    error_owner_next_of_kin_number = '';
+    $('#error_owner_next_of_kin_number').text(error_owner_next_of_kin_number);
+    $('#owner_next_of_kin_number').removeClass('has-error');
+   }
+  }
+
+  if(error_owner_name != '' || error_owner_phone_number != '' || error_owner_contact_address != '' || error_owner_state != '' || error_owner_next_of_kin != '' || error_owner_next_of_kin_number != '')
+  {
+   return false;
+  }
+  else
+  {
+   $('#btn_contact_details').attr("disabled", "disabled");
+   $(document).css('cursor', 'prgress');
+   $("#register_form").submit();
+  }
+  
+ });
+ 
+});
+</script>
